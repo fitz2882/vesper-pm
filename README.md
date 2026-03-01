@@ -31,8 +31,8 @@ cp vesper-pm/commands/vesper-pm-status.md .claude/commands/
 cp vesper-pm/commands/vesper-pm-resume.md .claude/commands/
 
 # Copy hooks
-cp vesper-pm/hooks/*.sh .claude/hooks/
-chmod +x .claude/hooks/*.sh
+cp vesper-pm/hooks/*.sh ~/.claude/hooks/
+chmod +x ~/.claude/hooks/vesper-pm-*.sh
 
 # Copy templates (used by the PM to initialize project structure)
 mkdir -p .claude/skills/vesper-pm/templates

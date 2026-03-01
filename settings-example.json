@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/vesper-pm-session-start.sh"
+            "command": "bash ~/.claude/hooks/vesper-pm-session-start.sh"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/vesper-pm-stop-validator.sh"
+            "command": "bash ~/.claude/hooks/vesper-pm-stop-validator.sh"
           }
         ]
       }
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/vesper-pm-post-tool.sh"
+            "command": "bash ~/.claude/hooks/vesper-pm-post-tool.sh"
           }
         ]
       }

@@ -1,0 +1,78 @@
+# .pm/agents.yaml — Agent Registry
+# Managed by PM orchestrator. Defines available specialist agents,
+# their capabilities, model assignments, and performance metrics.
+
+# Role templates by project type (PM selects and customizes)
+role_templates:
+  web-app:
+    - role: "architect"
+      description: "System design, technology selection, API design"
+      model_tier: "opus"
+      tools: ["Read", "Write", "Grep"]
+    - role: "frontend-dev"
+      description: "UI components, client-side logic, styling"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "backend-dev"
+      description: "Server logic, database queries, API endpoints"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "qa-tester"
+      description: "Test writing, test execution, bug identification"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "devops"
+      description: "Build config, deployment, CI/CD"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "reviewer"
+      description: "Code review, quality verification"
+      model_tier: "sonnet"
+      tools: ["Read", "Grep"]
+
+  cli-tool:
+    - role: "architect"
+      description: "CLI design, argument parsing strategy, module structure"
+      model_tier: "opus"
+      tools: ["Read", "Write", "Grep"]
+    - role: "core-dev"
+      description: "Core logic implementation"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "qa-tester"
+      description: "Test writing, edge case testing"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "doc-writer"
+      description: "README, man pages, help text"
+      model_tier: "haiku"
+      tools: ["Read", "Write"]
+
+  data-analytics:
+    - role: "architect"
+      description: "Pipeline design, data modeling"
+      model_tier: "opus"
+      tools: ["Read", "Write", "Grep"]
+    - role: "data-engineer"
+      description: "ETL pipelines, data transformations"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "analyst"
+      description: "Analysis logic, statistical methods"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+    - role: "viz-dev"
+      description: "Data visualization, dashboards"
+      model_tier: "sonnet"
+      tools: ["Read", "Write", "Edit", "Bash"]
+
+# Active agents for this project (populated during Phase 1)
+active_agents: []
+  # - agent_id: "frontend-dev-1"
+  #   role: "frontend-dev"
+  #   model_tier: "sonnet"
+  #   tools: ["Read", "Write", "Edit", "Bash"]
+  #   tasks_completed: 0
+  #   tasks_failed: 0
+  #   avg_confidence: null
+  #   avg_gvr_cycles: null

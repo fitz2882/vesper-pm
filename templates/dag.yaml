@@ -1,0 +1,48 @@
+# .pm/dag.yaml — Task Directed Acyclic Graph
+# Managed by PM orchestrator. Subagents do NOT modify this file.
+# Updated at: Phase 1 (creation), Phase 2 (design-driven updates),
+#             Phase 5 (status updates), Phase 6 (completion)
+
+project:
+  name: "{PROJECT_NAME}"
+  namespace: "{PROJECT_NAMESPACE}"
+  total_tasks: 0
+  completed_tasks: 0
+  critical_path: []       # Task IDs forming the longest dependency chain
+  max_parallel_width: 0   # Maximum concurrent agents
+
+# Execution groups — topologically sorted parallel groups
+execution_order:
+  # - group_id: "group-1"
+  #   tasks: ["task-001", "task-002"]
+  #   depends_on_groups: []
+  # - group_id: "group-2"
+  #   tasks: ["task-003"]
+  #   depends_on_groups: ["group-1"]
+
+tasks: []
+  # Template for each task:
+  # - id: "task-001"
+  #   name: "Descriptive task name"
+  #   description: "What this task accomplishes"
+  #   parent: null                    # Parent task ID for hierarchy
+  #   dependencies: []                # Task IDs this depends on
+  #   dependents: []                  # Task IDs that depend on this
+  #   assignee_role: "architect"      # Role from agents.yaml
+  #   model_tier: "opus"              # opus | sonnet | haiku
+  #   effort: "M"                     # S | M | L | XL
+  #   status: "pending"               # pending | ready | in_progress | blocked | completed | failed | skipped
+  #   blocked_by: ""                  # Description of blocker if status=blocked
+  #   files_owned: []                 # Files EXCLUSIVELY owned by this task
+  #   interfaces_produced: []         # Interface names this task outputs
+  #   interfaces_consumed: []         # Interface names this task requires
+  #   design_reference: ""            # Figma node ID or scaffold path
+  #   spec_file: ""                   # Path to .pm/specs/{id}.spec.md
+  #   acceptance_criteria: []
+  #   priority: 1                     # Lower = higher priority
+  #   started_at: ""
+  #   completed_at: ""
+  #   agent_id: ""                    # Actual agent that worked on it
+  #   result_file: ""                 # Path to .pm/results/{id}.result.yaml
+  #   gvr_cycles: 0                   # How many GVR iterations were needed
+  #   confidence: null                # Agent's self-assessed confidence (0.0-1.0)

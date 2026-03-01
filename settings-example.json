@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pm-session-start.sh"
+            "command": "bash .claude/hooks/vesper-pm-session-start.sh"
           }
         ]
       }
@@ -17,18 +17,18 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pm-stop-validator.sh"
+            "command": "bash .claude/hooks/vesper-pm-stop-validator.sh"
           }
         ]
       }
     ],
     "PostToolUse": [
       {
-        "matcher": "tool == \"Write\" || tool == \"Edit\"",
+        "matcher": "Edit|Write",
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pm-post-tool.sh"
+            "command": "bash .claude/hooks/vesper-pm-post-tool.sh"
           }
         ]
       }
